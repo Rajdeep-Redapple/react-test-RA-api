@@ -14,6 +14,7 @@ const path = require('path');
 
 const app = express();
 const schemaPath = './src/models';
+
 //Bootstrap models
 fs.readdirSync(schemaPath).forEach(function (file) {
   if (~file.indexOf('.js')) require(schemaPath + '/' + file)
