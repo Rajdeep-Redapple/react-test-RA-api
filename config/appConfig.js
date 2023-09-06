@@ -38,9 +38,16 @@ appConfig.pRNG = pRNG;
 appConfig.AWS = AWS;
 // appConfig.razp = razp;
 appConfig.admin = admin;
-appConfig.db = {
-    uri: `mongodb://${dbConfig.username}:${dbConfig.password}@${dbConfig.host}:${dbConfig.port}/${dbConfig.database}?authSource=admin`
-};
+if(process.env.NODE_ENV !== 'prd'){
+    appConfig.db = {
+        uri: `mongodb://${dbConfig.username}:${dbConfig.password}@${dbConfig.host}:${dbConfig.port}/${dbConfig.database}?authSource=admin`
+    };
+}
+else{
+    appConfig.db = {
+        uri: `mongodb+srv://${dbConfig.username}:${dbConfig.password}@${dbConfig.host}/`
+    };
+}
 
 
 appConfig.baseUrl = 'http://staging.redappletech.com:3009/';
