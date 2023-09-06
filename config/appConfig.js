@@ -45,7 +45,7 @@ if(process.env.NODE_ENV !== 'prd'){
 }
 else{
     appConfig.db = {
-        uri: `mongodb+srv://${dbConfig.username}:${dbConfig.password}@${dbConfig.host}/`
+        uri: `mongodb+srv://${dbConfig.username}:${dbConfig.password}@${dbConfig.host}/${dbConfig.database}`
     };
 }
 
