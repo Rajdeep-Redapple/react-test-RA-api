@@ -52,5 +52,10 @@ module.exports = {
             res.status(400);
             res.send(apiResponse);
         }
-    }
+    },
+    dashboardView : ()=> {
+
+    },
+
+    
 }

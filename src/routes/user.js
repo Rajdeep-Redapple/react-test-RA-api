@@ -10,5 +10,5 @@ module.exports.setRouter = (app) => {
     let baseUrl = `${appConfig.apiVersion}`;
     app.post(`${baseUrl}/login`, validator.loginValidate, userController.login);
     app.post(`${baseUrl}/register-user`, validator.registerValidate, userController.register);
-
+    app.get(`${baseUrl}/dashboard-view`, auth.isAuthorized, userController.dashboardView);
 };

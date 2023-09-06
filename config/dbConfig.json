@@ -28,11 +28,11 @@
         "mq_url":"amqp://localhost:5672"
     },
     "prd": {
-        "username": "mongo_user",
-        "password": "^zTr57e5Wo6H",
-        "database": "interview_platform_stg",
-        "host": "mongodb",
-        "port": "27017",
+        "username": "rajdeep",
+        "password": "MfgKyc1dfTT4e2Nj",
+        "database": "react_api_db",
+        "host": "freecluster1.ma8zy4u.mongodb.net",
+        "port": "27018",
         "dialect": "mongo",
         "dialectOptions": {
             "charset": "utf8mb4_unicode_ci"
